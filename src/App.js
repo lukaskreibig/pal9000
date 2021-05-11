@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
+import Banner from "./components/Banner";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header";
 import PhotoBlog from "./components/PhotoBlog/PhotoBlog";
@@ -25,6 +26,7 @@ export default function App() {
       <div className="twinkling"></div>
       <div className="clouds"></div>
       <Header />
+      <Banner />
       <Switch>       
         <Route path="/photoblog" render={() => <PhotoBlog photos={photos} />} />
         <Route
@@ -34,7 +36,7 @@ export default function App() {
           )}
         />
         <Route path='/shop' component={Shop} /> 
-        {/* <Route path='/contact' component={Contact} />  */}
+        {/* <Route path='/contact' component={Contact} />  */}        
       </Switch>     
       <Footer />
     </div>

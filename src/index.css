@@ -74,6 +74,17 @@
 .header-logo {
   justify-self: start;
 }
+
+.header-text{
+  background-color: #FF9830;  
+  border-radius: 3px;
+  color: white;
+  padding: 10px 10px;
+  width: 100%;
+  align-self: center;    
+}
+
+
 /* End header  */
 
 .title {
