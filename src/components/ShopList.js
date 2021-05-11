@@ -10,8 +10,9 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
   }
   return (
     <>
+    <div className="background-wrapper">
       <div className="shopMenu">
-        <button onClick={() => handleFilter()}>Wedding Stones</button>
+        <button className="button" onClick={() => handleFilter()}>Wedding Stones</button>
         {buy.length
           ? buy.map((mineral) => (
               <ShoppingDrone
@@ -37,6 +38,7 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
             name={mineral.name}
           />
         ))}
+      </div>
       </div>
     </>
   );

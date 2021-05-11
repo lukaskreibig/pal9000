@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import ShopList from "./components/ShopList";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import "./index.css";
 
 export default function App() {
   const [minerals, setMinerals] = useState([]);
@@ -34,6 +35,10 @@ export default function App() {
   return (
     <div className="wrapper">
       <Header />
+      <div className="background-wrapper">
+    <div className="stars"></div>
+      <div className="twinkling"></div>
+      <div className="clouds"></div>
       <div className="shopWrapper">
         <ShopList
           minerals={minerals}
@@ -41,6 +46,7 @@ export default function App() {
           deleteBuy={deleteBuy}
           buy={buy}
         />
+      </div>
       </div>
       <Footer />
     </div>
