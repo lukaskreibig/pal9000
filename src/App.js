@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 
 export default function App() {
   const [minerals, setMinerals] = useState([]);
+  const [buy, setBuy] = useState([]);
+
   const getMinerals = () => {
     axios
       .get(
@@ -21,11 +23,15 @@ export default function App() {
 
   useEffect(getMinerals, []);
 
+  function handleBuy(id) {
+    console.log(id);
+  }
+
   return (
     <div className="wrapper">
       <Header />
       <div className="shopWrapper">
-        <ShopList minerals={minerals} />
+        <ShopList minerals={minerals} handleBuy={handleBuy} />
       </div>
       <Footer />
     </div>

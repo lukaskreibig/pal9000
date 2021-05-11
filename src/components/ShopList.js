@@ -1,7 +1,7 @@
 import React from "react";
 import Shop from "./Shop";
 
-function ShopList({ minerals }) {
+function ShopList({ minerals, handleBuy }) {
   console.log(minerals);
   return (
     <>
@@ -9,6 +9,7 @@ function ShopList({ minerals }) {
       <div className="shopContainer">
         {minerals.map((mineral) => (
           <Shop
+            handleBuy={handleBuy}
             id={mineral.id}
             key={mineral.id}
             img={mineral.img_url}
@@ -21,3 +22,5 @@ function ShopList({ minerals }) {
 }
 
 export default ShopList;
+
+// .slice(0, 9)
