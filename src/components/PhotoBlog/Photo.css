@@ -1,6 +1,7 @@
 .photo-container {  
   width: 300px;
   margin: 10px;
+  z-index: 3;
 }
 
 .photo-container img {    
