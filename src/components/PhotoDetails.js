@@ -7,9 +7,9 @@ const PhotoDetails = ({ photos, routeProps }) => {
       console.log(foundMatch)
     return(
         <div className="photo-container">
-            {/*  <Link to="/photodetails">
+            <Link to="/photodetails">
               <img alt='' src={foundMatch.photos.img_src} />
-            </Link> */}
+            </Link>
           <p>{foundMatch.photos.id}</p>
         </div>
     )
