@@ -1,11 +1,23 @@
 import React from "react";
 import Shop from "./Shop";
+import ShoppingDrone from "./ShoppingDrone";
 
-function ShopList({ minerals, handleBuy }) {
-  console.log(minerals);
+function ShopList({ minerals, handleBuy, buy }) {
+  console.log(buy);
   return (
     <>
-      <div className="shopMenu">ShopMenu</div>
+      <div className="shopMenu">
+        {buy.length
+          ? buy.map((mineral) => (
+              <ShoppingDrone
+                id={mineral.id}
+                key={mineral.id}
+                img={mineral.img_url}
+                name={mineral.name}
+              />
+            ))
+          : "Nothing in the Shopping Drone"}
+      </div>
       <div className="shopContainer">
         {minerals.map((mineral) => (
           <Shop

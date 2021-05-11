@@ -23,15 +23,27 @@ export default function App() {
 
   useEffect(getMinerals, []);
 
-  function handleBuy(id) {
-    console.log(id);
+  function handleBuy(value) {
+    minerals.find((mineral) =>
+      value === mineral.id ? setBuy([...buy, mineral]) : console.log("False")
+    );
+    console.log(buy);
+
+    function deleteBuy(value) {}
+
+    // setBuy({ ...buy }, mineral)
   }
 
   return (
     <div className="wrapper">
       <Header />
       <div className="shopWrapper">
-        <ShopList minerals={minerals} handleBuy={handleBuy} />
+        <ShopList
+          minerals={minerals}
+          handleBuy={handleBuy}
+          deleteBuy={deleteBuy}
+          buy={buy}
+        />
       </div>
       <Footer />
     </div>
