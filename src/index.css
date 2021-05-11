@@ -121,6 +121,7 @@
 
 /* Orbiting planets */
 .spinner-box {
+  z-index: 3;
   width: 100px;
   height: 100px;
   display: flex;

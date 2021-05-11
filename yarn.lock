@@ -2472,6 +2472,16 @@
   "resolved" "https://registry.npmjs.org/axe-core/-/axe-core-4.1.2.tgz"
   "version" "4.1.2"
 
+<<<<<<< HEAD
+"axios@^0.21.1":
+  "integrity" "sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA=="
+  "resolved" "https://registry.npmjs.org/axios/-/axios-0.21.1.tgz"
+  "version" "0.21.1"
+  dependencies:
+    "follow-redirects" "^1.10.0"
+
+=======
+>>>>>>> 32f10ca41aebfe3fd1c4785f564794dce3990c42
 "axobject-query@^2.2.0":
   "integrity" "sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA=="
   "resolved" "https://registry.npmjs.org/axobject-query/-/axobject-query-2.2.0.tgz"
@@ -5053,7 +5063,11 @@
     "inherits" "^2.0.3"
     "readable-stream" "^2.3.6"
 
+<<<<<<< HEAD
+"follow-redirects@^1.0.0", "follow-redirects@^1.10.0":
+=======
 "follow-redirects@^1.0.0":
+>>>>>>> 32f10ca41aebfe3fd1c4785f564794dce3990c42
   "integrity" "sha512-6mPTgLxYm3r6Bkkg0vNM0HTjfGrOEtsfbhagQvbxDEsEkpNhw582upBaoRZylzen6krEmxXJgt9Ju6HiI4O7BA=="
   "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.13.2.tgz"
   "version" "1.13.2"
@@ -9741,7 +9755,11 @@
   "resolved" "https://registry.npmjs.org/sanitize.css/-/sanitize.css-10.0.0.tgz"
   "version" "10.0.0"
 
+<<<<<<< HEAD
+"sass-loader@^10.0.5":
+=======
 "sass-loader@^10.0.5", "sass-loader@^10.1.1":
+>>>>>>> 32f10ca41aebfe3fd1c4785f564794dce3990c42
   "integrity" "sha512-W6gVDXAd5hR/WHsPicvZdjAWHBcEJ44UahgxcIE196fW2ong0ZHMPO1kZuI5q0VlvMQZh32gpv69PLWQm70qrw=="
   "resolved" "https://registry.npmjs.org/sass-loader/-/sass-loader-10.1.1.tgz"
   "version" "10.1.1"
@@ -10533,11 +10551,14 @@
     "has-flag" "^4.0.0"
     "supports-color" "^7.0.0"
 
+<<<<<<< HEAD
+=======
 "susy@^3.0.7":
   "integrity" "sha512-pY2Kw9nev63xJ0LsU7Dz2s+bHcUFBgYx/DThheuRYhSYSsZSpR9YBNlREzGCDxSJR4BRRzvgeD8iPkEoCu4ZgQ=="
   "resolved" "https://registry.npmjs.org/susy/-/susy-3.0.7.tgz"
   "version" "3.0.7"
 
+>>>>>>> 32f10ca41aebfe3fd1c4785f564794dce3990c42
 "svg-parser@^2.0.2":
   "integrity" "sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ=="
   "resolved" "https://registry.npmjs.org/svg-parser/-/svg-parser-2.0.4.tgz"
@@ -10921,6 +10942,11 @@
   "version" "0.0.6"
 
 "typescript@^3.2.1 || ^4", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
+<<<<<<< HEAD
+  "integrity" "sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg=="
+  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.2.4.tgz"
+=======
+>>>>>>> 32f10ca41aebfe3fd1c4785f564794dce3990c42
   "version" "4.2.4"
 
 "unicode-canonical-property-names-ecmascript@^1.0.4":
