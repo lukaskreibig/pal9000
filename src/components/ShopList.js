@@ -4,14 +4,29 @@ import ShoppingDrone from "./ShoppingDrone";
 import { useState } from "react";
 
 function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
-  const [filter, setFilter] = useState(false);
-  function handleFilter() {
-    setFilter(!filter);
+  const [fancyFilter, setFancyFilter] = useState(false);
+  const [funnyFilter, setFunnyFilter] = useState(false);
+  const [celebFilter, setCelebFilter] = useState(false);
+  const [comFilter, setComFilter] = useState(false);
+
+  function handleFilter(setF, f) {
+    setF(!f);
   }
   return (
     <>
       <div className="shopMenu">
-        <button onClick={() => handleFilter()}>Wedding Stones</button>
+        <button onClick={() => handleFilter(setFancyFilter, fancyFilter)}>
+          Fancy Stones
+        </button>
+        <button onClick={() => handleFilter(setFunnyFilter, funnyFilter)}>
+          Funny Radioactive Stones
+        </button>
+        <button onClick={() => handleFilter(setCelebFilter, celebFilter)}>
+          Celebratory Stones
+        </button>
+        <button onClick={() => handleFilter(setComFilter, comFilter)}>
+          Commemorative Stones
+        </button>
         {buy.length
           ? buy.map((mineral) => (
               <ShoppingDrone
@@ -25,8 +40,8 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
           : "Nothing in the Shopping Drone"}
       </div>
       <div className="shopContainer">
-        {(filter
-          ? minerals.filter((mineral) => mineral.name.includes("Aenigmatite"))
+        {(fancyFilter
+          ? minerals.filter((mineral) => mineral.name.length > 12)
           : minerals
         ).map((mineral) => (
           <Shop
