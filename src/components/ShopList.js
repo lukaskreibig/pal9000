@@ -1,12 +1,17 @@
 import React from "react";
 import Shop from "./Shop";
 import ShoppingDrone from "./ShoppingDrone";
+import { useState } from "react";
 
 function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
-  console.log(buy);
+  const [filter, setFilter] = useState(false);
+  function handleFilter() {
+    setFilter(!filter);
+  }
   return (
     <>
       <div className="shopMenu">
+        <button onClick={() => handleFilter()}>Wedding Stones</button>
         {buy.length
           ? buy.map((mineral) => (
               <ShoppingDrone
