@@ -25,7 +25,10 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
           : "Nothing in the Shopping Drone"}
       </div>
       <div className="shopContainer">
-        {minerals.map((mineral) => (
+        {(filter
+          ? minerals.filter((mineral) => mineral.name.includes("Aenigmatite"))
+          : minerals
+        ).map((mineral) => (
           <Shop
             handleBuy={handleBuy}
             id={mineral.id}
