@@ -24,14 +24,11 @@ export default function App() {
   useEffect(getMinerals, []);
 
   function handleBuy(value) {
-    minerals.find((mineral) =>
-      value === mineral.id ? setBuy([...buy, mineral]) : console.log("False")
-    );
-    console.log(buy);
+    setBuy([...buy, minerals.find((mineral) => value === mineral.id)]);
+  }
 
-    function deleteBuy(value) {}
-
-    // setBuy({ ...buy }, mineral)
+  function deleteBuy(e) {
+    setBuy(buy.filter((element) => element.id !== e));
   }
 
   return (

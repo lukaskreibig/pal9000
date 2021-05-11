@@ -2,7 +2,7 @@ import React from "react";
 import Shop from "./Shop";
 import ShoppingDrone from "./ShoppingDrone";
 
-function ShopList({ minerals, handleBuy, buy }) {
+function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
   console.log(buy);
   return (
     <>
@@ -10,6 +10,7 @@ function ShopList({ minerals, handleBuy, buy }) {
         {buy.length
           ? buy.map((mineral) => (
               <ShoppingDrone
+                deleteBuy={deleteBuy}
                 id={mineral.id}
                 key={mineral.id}
                 img={mineral.img_url}
