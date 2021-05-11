@@ -1,9 +1,9 @@
 import React from "react";
 
-function Shop({ img_url, name }) {
+function Shop({ img, name }) {
   return (
     <div className="shop">
-      <img src={img_url} alt={name} />
+      <img src={img} alt={name} />
     </div>
   );
 }

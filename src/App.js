@@ -2,7 +2,6 @@ import "./shop.css";
 import "./index.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-
 import ShopList from "./components/ShopList";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -25,7 +24,9 @@ export default function App() {
   return (
     <div className="wrapper">
       <Header />
-      <ShopList minerals={minerals} />
+      <div className="shopWrapper">
+        <ShopList minerals={minerals} />
+      </div>
       <Footer />
     </div>
   );
