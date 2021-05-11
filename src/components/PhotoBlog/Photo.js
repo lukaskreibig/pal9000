@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
 import "./Photo.css"
 
 const Photo = ({ photos }) => {
     return(
         <div className="photo-container">
-            <img alt='' src={photos.img_src} />
-            <p>{photos.id}</p>
+            <Link to={`/photos/${photos.id}`}>
+              <img alt='' src={photos.img_src} />
+            </Link>           
         </div>
     )
 }

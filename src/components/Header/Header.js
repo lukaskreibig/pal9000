@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -12,9 +13,12 @@ export default function Header() {
             width="auto"
           ></img>
         </a>
-
+        <Link to="/rockshop">
         <p className="header-text">Rock Shop</p>
+        </Link>
+        <Link to="/photoblog">
         <p className="header-text">Photo Journal</p>
+        </Link>
       </div>
     </div>
   );
