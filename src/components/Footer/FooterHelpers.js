@@ -11,3 +11,11 @@ if(!isMetric) {
 }
 return Math.round(returnTemp);
  }
+
+ unction displaySpeed(speed) {
+	let returnSpeed = speed
+	if (!isMetric()) {
+		returnSpeed = speed / 1.609
+	}
+	return Math.round(returnSpeed)
+}
