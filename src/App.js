@@ -1,9 +1,13 @@
-import "./App.css";
+import "./shop.css";
+import "./index.css";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+
 import ShopList from "./components/ShopList";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-function App() {
+export default function App() {
   const [minerals, setMinerals] = useState([]);
   const getMinerals = () => {
     axios
@@ -19,10 +23,10 @@ function App() {
   useEffect(getMinerals, []);
 
   return (
-    <div className="App">
+    <div className="wrapper">
+      <Header />
       <ShopList minerals={minerals} />
+      <Footer />
     </div>
   );
 }
-
-export default App;
