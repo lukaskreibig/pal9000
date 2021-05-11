@@ -6,7 +6,7 @@ function ShopList({ minerals }) {
   return (
     <div className="shopContainer">
       {minerals.map((mineral) => (
-        <Shop key={mineral.id} />
+        <Shop id key={mineral.id} img={mineral.img_url} />
       ))}
     </div>
   );

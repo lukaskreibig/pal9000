@@ -1,5 +1,5 @@
 import "./App.css";
-import Shop from "./components/ShopList";
+import ShopList from "./components/ShopList";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -8,7 +8,7 @@ function App() {
   const getMinerals = () => {
     axios
       .get(
-        "https://random-data-api.com/api/lorem_flickr/random_lorem_flickr?size=30"
+        "https://lit-escarpment-01617.herokuapp.com/https://salty-escarpment-83550.herokuapp.com/api/rocks"
       )
       .then((response) => response.data)
       .then((data) => {
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Shop minerals={minerals} />
+      <ShopList minerals={minerals} />
     </div>
   );
 }
