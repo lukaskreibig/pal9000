@@ -1,53 +1,43 @@
-import "./shop.css";
-import "./index.css";
+import React, { useEffect, useState } from "react";
+import { Route, Switch } from "react-router";
+import Banner from "./components/Banner";
 import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import ShopList from "./components/ShopList";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import Header from "./components/Header";
+import PhotoBlog from "./components/PhotoBlog/PhotoBlog";
+import PhotoDetails from "./components/PhotoDetails";
+import Shop from "./components/Shop";
 import "./index.css";
 
 export default function App() {
-  const [minerals, setMinerals] = useState([]);
-  const [buy, setBuy] = useState([]);
+  const [photos, setPhotos] = useState([]);
 
-  const getMinerals = () => {
-    axios
-      .get(
-        "https://lit-escarpment-01617.herokuapp.com/https://salty-escarpment-83550.herokuapp.com/api/rocks"
-      )
-      .then((response) => response.data)
-      .then((data) => {
-        setMinerals(data);
-      });
+  const getImages = () => {
+    fetch(
+      "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=MrtkEfpCKuSFETDqfHPzxYBd2CW09acPNjkJrh9X"
+    )
+      .then((res) => res.json())
+      .then((data) => setPhotos(data.photos));
   };
-
-  useEffect(getMinerals, []);
-
-  function handleBuy(value) {
-    setBuy([...buy, minerals.find((mineral) => value === mineral.id)]);
-  }
-
-  function deleteBuy(e) {
-    setBuy(buy.filter((element) => element.id !== e));
-  }
+  useEffect(getImages, []);
 
   return (
-    <div className="wrapper">
-      <Header />
-      <div className="background-wrapper">
-    <div className="stars"></div>
+    <div className="wrapper wrapper-app">
+      <div className="stars"></div>
       <div className="twinkling"></div>
       <div className="clouds"></div>
-      <div className="shopWrapper">
-        <ShopList
-          minerals={minerals}
-          handleBuy={handleBuy}
-          deleteBuy={deleteBuy}
-          buy={buy}
+      <Header />
+      <Banner />
+      <Switch>       
+        <Route path="/photoblog" render={() => <PhotoBlog photos={photos} />} />
+        <Route
+          path="/photos/:id"
+          render={(routeProps) => (
+            <PhotoDetails routeProps={routeProps} photos={photos} />
+          )}
         />
-      </div>
-      </div>
+        <Route path='/shop' component={Shop} /> 
+        {/* <Route path='/contact' component={Contact} />  */}        
+      </Switch>     
       <Footer />
     </div>
   );
