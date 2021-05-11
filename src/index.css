@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px 4fr 100px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header-wrapper {
+  grid-row-start: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #6f0e77;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
 }
+
+.header-logo {
+  justify-self: start;
+}
+
+/* Footer */
+.footer-wrapper {
+  grid-row-start: 5;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  background-color: #6f0e77;
+}
+
+/* Orbiting planets */
+.spinner-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.solar-system {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orbit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffffa5;
+  border-radius: 50%;
+}
+.earth-orbit {
+  width: 55px;
+  height: 55px;
+  animation: spin 12s linear 0s infinite;
+}
+.venus-orbit {
+  width: 35px;
+  height: 35px;
+  animation: spin 7.4s linear 0s infinite;
+}
+.mercury-orbit {
+  width: 20px;
+  height: 20px;
+  animation: spin 3s linear 0s infinite;
+}
+.planet {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3ff9dc;
+}
+
+.sun {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffab91;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* end Orbiting Planets */
