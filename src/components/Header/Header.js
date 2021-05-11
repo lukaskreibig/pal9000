@@ -6,7 +6,6 @@ export default function Header() {
             <a href="/"><div className="header-logo"></div></a> 
             <p className="header-text">Rock Shop</p>
             <p className="header-text">Photo Journal</p>
-            
         </div>
     )
 }
