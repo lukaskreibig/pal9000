@@ -1,0 +1,14 @@
+.photo-container {  
+  width: 300px;
+  margin: 10px;
+}
+
+.photo-container img {    
+    width: 300px;    
+  }
+
+.photoblog-container {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+}

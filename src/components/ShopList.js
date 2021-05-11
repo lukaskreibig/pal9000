@@ -8,6 +8,7 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
   const [funnyFilter, setFunnyFilter] = useState(false);
   const [celebFilter, setCelebFilter] = useState(false);
   const [comFilter, setComFilter] = useState(false);
+  const [filtered, setFiltered] = useState([]);
 
   function handleFilter(setF, f) {
     setF(!f);
@@ -37,7 +38,7 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
                 name={mineral.name}
               />
             ))
-          : "Nothing in the Shopping Drone"}
+          : "Nothing in the Shopping Drone yet!"}
       </div>
       <div className="shopContainer">
         {(fancyFilter
