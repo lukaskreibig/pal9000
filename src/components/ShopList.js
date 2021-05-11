@@ -42,6 +42,21 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
       <div className="shopContainer">
         {(fancyFilter
           ? minerals.filter((mineral) => mineral.name.length > 12)
+          : funnyFilter
+          ? minerals.filter(
+              (mineral) =>
+                mineral.id === 20 || mineral.id === 17 || mineral.id === 6
+            )
+          : celebFilter
+          ? minerals.filter(
+              (mineral) =>
+                mineral.name.length < 7 ||
+                (mineral.name.length > 10 && mineral.name.length < 12)
+            )
+          : comFilter
+          ? minerals.filter(
+              (mineral) => mineral.name.length > 5 && mineral.name.length < 8
+            )
           : minerals
         ).map((mineral) => (
           <Shop
