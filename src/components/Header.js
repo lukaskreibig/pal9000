@@ -13,7 +13,7 @@ export default function Header() {
             width="auto"
           ></img>
         </a>
-        <Link to="/rockshop">
+        <Link to="/shop">
         <p className="header-text">Rock Shop</p>
         </Link>
         <Link to="/photoblog">

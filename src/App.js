@@ -34,7 +34,7 @@ export default function App() {
           )}
         />
         <Route path='/shop' component={Shop} /> 
-        {/* <Route path='/contact' component={Contact} />  */}
+        {/* <Route path='/contact' component={Contact} />  */}        
       </Switch>     
       <Footer />
     </div>
