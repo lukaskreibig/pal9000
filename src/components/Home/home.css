@@ -13,7 +13,7 @@
 .home-intro-text {
     display: flex;
     flex-direction: column;
-   padding: 20px;
+   padding: 30px;
    align-content: center;
    justify-content: center;
     align-self: center;
@@ -22,8 +22,9 @@
     font-family: "Roboto", sans-serif;
     color: #fff;
     background: linear-gradient(#ffb88c,#de6262);
-    min-height: 500px;
+   
     border-radius: 2rem;
+  
 
 }
 .img-container {
