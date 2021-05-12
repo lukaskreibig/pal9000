@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body{
+  background-color: #000;
+  font-family: "Roboto", sans-serif;
+}
+
 .photo-container {  
   width: 320px;
   margin: 10px;
@@ -66,7 +73,7 @@
   padding: 8px 0px;
   width: 100%;
   align-self: center;    
-  border: none;
+  border: none;  
 }
 
 .polaroid-details {
@@ -101,9 +108,24 @@
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+.last{
+  margin-bottom: 30px;
+}
+
+.first{
+  margin-top: 30px;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
   
 .polaroid img {  
-  width: 300px;
+  width: 500px;
+  height: 400px;
+}
+
+polaroid-details {
+  margin-right: 50px;
 }
 }

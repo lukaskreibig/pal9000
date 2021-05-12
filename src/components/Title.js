@@ -8,7 +8,7 @@ export default function Title(props) {
         } else if (props.location === "/shop") {
           return "Our Shop";
         } else if (props.location === "/photoblog") {
-          return "Our Photo Blog";
+          return "Our Photo Journal";
         } else if (props.location.includes("/photos")) {
           return "Photo Details";   
         }    
