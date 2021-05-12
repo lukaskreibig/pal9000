@@ -107,7 +107,11 @@
   font-family: "Roboto", sans-serif;
   z-index: 3;
   color: white;
-  border: 1px solid #275ab9;
+}
+
+.shoppingBorder {
+  border: 0.2px solid #275ab9;
+  border-radius: 6px;
 }
 
 .bought-rock {
