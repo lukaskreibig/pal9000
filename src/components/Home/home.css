@@ -1,69 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .home-container {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    justify-self: center;
-    display:flex; flex-direction:column; flex:1;
-   
-    padding: 20px;
-    width: 60%
+  grid-row-start: 1;
+  grid-column-start: 2;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 20px;
+  width: 60%;
 }
 
 .home-intro-text {
-    display: flex;
-    flex-direction: column;
-   padding: 30px;
-   align-content: center;
-   justify-content: center;
-    align-self: center;
-    text-align: justify;
-    z-index: 3;
-    font-family: "Roboto", sans-serif;
-    color: #fff;
-    background: linear-gradient(#ffb88c,#de6262);
-   
-    border-radius: 2rem;
-  
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+  text-align: justify;
+  z-index: 3;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background: linear-gradient(#ffb88c, #de6262);
 
+  border-radius: 2rem;
 }
 .img-container {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-   justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
 }
 .home-img {
-    z-index: 3;
-    justify-self: center;
-    align-self: center;
-    margin: 20px;
-
+  z-index: 3;
+  justify-self: center;
+  align-self: center;
+  margin: 20px;
 }
 
 @media screen and (max-width: 600px) {
-    .img-container {
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-       justify-content: center;
-       max-width: 500px;
-    }
-    .home-img {
-        z-index: 3;
-        justify-self: center;
-        align-self: center;
-        max-width: 100px;
-        margin: 5px;
-    
-    }
-    
-    .home-intro-text {
-        display: flex;
-        flex-direction: column;
-       padding: 5px;
-       width: 300px;
-       margin-right: 40px;
-       margin-top: -80px;
-}
+  .img-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    max-width: 500px;
+  }
+  .home-img {
+    z-index: 3;
+    justify-self: center;
+    align-self: center;
+    max-width: 100px;
+    margin: 5px;
+  }
+
+  .home-intro-text {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 300px;
+    margin-right: 40px;
+    margin-top: -80px;
+    padding: 20px;
+  }
 }
