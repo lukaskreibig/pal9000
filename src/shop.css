@@ -176,10 +176,17 @@
   margin: 10px;
   width: 80vw;
   height: 70px;
+  font-size: 20px;
   cursor: pointer;
+  animation: colorchange 0.8s infinite alternate;
 }
 
-#pressed {
-  background-color: #fcd3a5;
-  color: #0f6d7e;
+@keyframes colorchange {
+  0% {
+    color: rgb(115, 255, 0);
+  }
+
+  100% {
+    color: rgb(27, 172, 39);
+  }
 }
