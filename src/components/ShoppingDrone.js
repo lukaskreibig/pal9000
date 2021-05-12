@@ -2,10 +2,10 @@ import React from "react";
 
 function ShoppingDrone({ img, name, deleteBuy, id }) {
   return (
-    <div className="shop">
+    <div className="shop-cart">
       {name}
-      <img src={img} alt={name} width="150px" height="150px" />
-      <button onClick={() => deleteBuy(id)}> Delete </button>
+      <img className="bought-rock" src={img} alt={name} width="150px" height="150px" />
+      <button className="button" onClick={() => deleteBuy(id)}> Delete </button>
     </div>
   );
 }

@@ -10,11 +10,77 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
   const [comFilter, setComFilter] = useState(false);
   const [filtered, setFiltered] = useState([]);
 
+  console.log(filtered);
+
   function handleFilter(setF, f) {
     setF(!f);
+    if (fancyFilter) {
+      setFiltered([
+        ...minerals.filter(
+          (mineral) =>
+            mineral.id === 20 || mineral.id === 17 || mineral.id === 6
+        ),
+      ]);
+    } else if (!fancyFilter) {
+      setFiltered(
+        ...filtered,
+        ...minerals.filter(
+          (mineral) =>
+            mineral.id !== 20 || mineral.id !== 17 || mineral.id !== 6
+        )
+      );
+    } else if (funnyFilter) {
+      setFiltered([
+        ...filtered,
+        minerals.filter(
+          (mineral) =>
+            mineral.name.length < 7 ||
+            (mineral.name.length > 10 && mineral.name.length < 12)
+        ),
+      ]);
+    } else if (!funnyFilter) {
+      setFiltered([
+        ...filtered,
+        minerals.filter(
+          (mineral) =>
+            !mineral.name.length < 7 ||
+            (!mineral.name.length > !10 && !mineral.name.length < 12)
+        ),
+      ]);
+    } else if (comFilter) {
+      setFiltered([
+        ...filtered,
+        minerals.filter(
+          (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
+        ),
+      ]);
+    } else if (!comFilter) {
+      setFiltered([
+        ...filtered,
+        minerals.filter(
+          (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
+        ),
+      ]);
+    } else if (fancyFilter) {
+      setFiltered([
+        ...filtered,
+        minerals.filter(
+          (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
+        ),
+      ]);
+    } else if (!fancyFilter) {
+      setFiltered([
+        ...filtered,
+        minerals.filter(
+          (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
+        ),
+      ]);
+    } else {
+      console.log("Error");
+    }
   }
   return (
-    <>
+    <div className="background-wrapper">
       <div className="shopMenu">
         <button onClick={() => handleFilter(setFancyFilter, fancyFilter)}>
           Fancy Stones
@@ -41,25 +107,7 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
           : "Nothing in the Shopping Drone yet!"}
       </div>
       <div className="shopContainer">
-        {(fancyFilter
-          ? minerals.filter((mineral) => mineral.name.length > 12)
-          : funnyFilter
-          ? minerals.filter(
-              (mineral) =>
-                mineral.id === 20 || mineral.id === 17 || mineral.id === 6
-            )
-          : celebFilter
-          ? minerals.filter(
-              (mineral) =>
-                mineral.name.length < 7 ||
-                (mineral.name.length > 10 && mineral.name.length < 12)
-            )
-          : comFilter
-          ? minerals.filter(
-              (mineral) => mineral.name.length > 5 && mineral.name.length < 8
-            )
-          : minerals
-        ).map((mineral) => (
+        {filtered.map((mineral) => (
           <Shop
             handleBuy={handleBuy}
             id={mineral.id}
@@ -69,7 +117,7 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
