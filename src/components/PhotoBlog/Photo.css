@@ -1,15 +1,110 @@
 .photo-container {  
-  width: 300px;
+  width: 320px;
   margin: 10px;
   z-index: 3;
 }
 
-.photo-container img {    
-    width: 300px;    
-  }
-
 .photoblog-container {
   display: flex;
-  margin: 20px;
+  margin: auto;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.photos-name {
+  padding: 30px 0 0;
+  color:#000;  
+}
+
+.polaroid a {
+  background: #ffffff;
+  display: inline-block;
+  margin: 0px auto 30px;
+  padding: 15px 15px 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -webkit-transition: all .20s linear;
+  -moz-transition: all .20s linear;
+  transition: all .20s linear;
+  z-index: 0;
+  position: relative;
+}
+
+.polaroid a:after {
+  color: #333;
+  font-size: 25px;
+  content: attr(title);
+  position: relative;
+  top: 15px;
+}
+
+.polaroid img {
+  display: block;
+  width: 300px;
+}
+
+.polaroid a:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+  z-index: 10;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+}
+
+.btn{
+  background-color: #FF9830;  
+  border-radius: 3px;
+  color: white;
+  padding: 8px 0px;
+  width: 100%;
+  align-self: center;    
+  border: none;
+}
+
+.polaroid-details {
+  background: #ffffff;
+  display: inline-block;
+  margin: 0px auto 30px;
+  padding: 15px 15px 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -webkit-transition: all .20s linear;
+  -moz-transition: all .20s linear;
+  transition: all .20s linear;
+  z-index: 3;
+  position: relative;
+}
+
+.photo-container-details{
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-details{
+  color: #000;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  
+.polaroid img {
+  
+  width: 800px;
+}
 }

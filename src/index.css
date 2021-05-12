@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .body {
@@ -43,7 +44,7 @@
     background:transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
 	animation: move-clouds-back 200s linear infinite;
 }
-
+ 
 @keyframes move-twink-back {
 	from {background-position:0 0;}
 	to {background-position:-10000px 5000px;}
