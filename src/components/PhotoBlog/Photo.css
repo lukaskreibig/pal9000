@@ -1,3 +1,7 @@
+body{
+  background-color: black;
+}
+
 .photo-container {  
   width: 320px;
   margin: 10px;
