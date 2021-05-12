@@ -96,7 +96,7 @@
 .shopMenu {
   margin-top: 16px;
   margin-left: 15px;
-  height: 300px;
+  height: auto;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -106,6 +106,12 @@
   margin: 20px;
   font-family: "Roboto", sans-serif;
   z-index: 3;
+  color: white;
+}
+
+.shoppingBorder {
+  border: 0.2px solid #275ab9;
+  border-radius: 6px;
 }
 
 .bought-rock {
@@ -116,12 +122,12 @@
 }
 
 .shop-cart {
-  background: linear-gradient(#ffb88c, #de6262);
+  background: #0f6d7e;
   z-index: 3;
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 140px;
   border-style: solid;
-  border: 0.5px solid #275ab9;
+  border: 0.2px solid #275ab9;
   border-radius: 6px;
   margin: 15px;
   display: flex;
@@ -137,7 +143,7 @@
   box-shadow: 2px 2px 4px black;
   border: 0.5px solid #275ab9;
   border-radius: 6px;
-  width: 140px;
+  width: 130px;
   height: 80px;
   cursor: pointer;
   transition: 0.3s;
@@ -156,12 +162,24 @@
   border-radius: 6px;
   margin: 10px;
   width: 70px;
-  height: 20px;
+  height: 70px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.buttondelete:hover {
+.radioActive {
+  background-color: #0f6d7e;
+  color: #fcd3a5;
+  box-shadow: 2px 2px 4px black;
+  border: 0.5px solid #275ab9;
+  border-radius: 6px;
+  margin: 10px;
+  width: 80vw;
+  height: 70px;
+  cursor: pointer;
+}
+
+#pressed {
   background-color: #fcd3a5;
   color: #0f6d7e;
 }
