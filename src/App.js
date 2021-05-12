@@ -9,6 +9,7 @@ import PhotoDetails from "./components/PhotoDetails";
 import "./index.css";
 import ShopList from "./components/ShopList";
 import axios from "axios";
+import Home from "./components/Home/Home";
 
 export default function App() {
   const [minerals, setMinerals] = useState([]);
@@ -74,6 +75,12 @@ export default function App() {
               buy={buy}
             />
           </Route>
+          <Route
+            exact path="/"
+            render={(routeProps) => (
+              <Home />
+            )}
+          />
         </Switch>
         <Footer />
       </div>

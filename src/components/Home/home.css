@@ -16,7 +16,7 @@
    padding: 20px;
    align-content: center;
    justify-content: center;
-    align-self: flex-end;
+    align-self: center;
     text-align: justify;
     z-index: 3;
     font-family: "Roboto", sans-serif;
@@ -32,7 +32,7 @@
     align-content: center;
    justify-content: center;
 }
-img {
+.home-img {
     z-index: 3;
     justify-self: center;
     align-self: center;
@@ -40,3 +40,29 @@ img {
 
 }
 
+@media screen and (max-width: 600px) {
+    .img-container {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+       justify-content: center;
+       max-width: 500px;
+    }
+    .home-img {
+        z-index: 3;
+        justify-self: center;
+        align-self: center;
+        max-width: 100px;
+        margin: 5px;
+    
+    }
+    
+    .home-intro-text {
+        display: flex;
+        flex-direction: column;
+       padding: 5px;
+       width: 300px;
+       margin-right: 40px;
+       margin-top: -80px;
+}
+}
