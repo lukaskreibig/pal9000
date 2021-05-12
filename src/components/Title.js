@@ -9,11 +9,11 @@ export default function Title(props) {
           return "Our Shop";
         } else if (props.location === "/photoblog") {
           return "Our Photo Blog";
-        } else if (props.location === "/contact") {
-          return "Contact us";   
+        } else if (props.location.includes("/photos")) {
+          return "Photo Details";   
         }    
       };
-
+      
     return (
         <div className="wrapper">
             <h1 className="title">{getBannerMessage()}</h1>

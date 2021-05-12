@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .body {
@@ -45,7 +46,7 @@
     top center;
   animation: move-clouds-back 200s linear infinite;
 }
-
+ 
 @keyframes move-twink-back {
   from {
     background-position: 0 0;
