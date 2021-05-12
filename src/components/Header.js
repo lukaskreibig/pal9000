@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Header() { 
-
+export default function Header() {
   return (
     <div className="wrapper">
       <div className="header-wrapper">
@@ -13,13 +12,13 @@ export default function Header() {
             height="50px"
             width="auto"
           ></img>
-         </Link>
+        </Link>
         <Link to="/shop">
-        <p className="header-text">Rock Shop</p>
+          <p className="header-text">Rock Shop</p>
         </Link>
         <Link to="/photoblog">
-        <p className="header-text">Photo Journal</p>
-        </Link>      
+          <p className="header-text">Photo Journal</p>
+        </Link>
       </div>
     </div>
   );
