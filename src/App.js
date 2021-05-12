@@ -49,7 +49,6 @@ export default function App() {
   return (
     <div className="wrapper">
       <Header />
-
       <div className="background-app">
         <div className="stars"></div>
         <div className="twinkling"></div>
@@ -82,8 +81,8 @@ export default function App() {
             )}
           />
         </Switch>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
