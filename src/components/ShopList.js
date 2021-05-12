@@ -10,75 +10,77 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
   const [comFilter, setComFilter] = useState(false);
   const [filtered, setFiltered] = useState([]);
 
-  console.log(filtered);
-
   function handleFilter(setF, f) {
     setF(!f);
+
     if (fancyFilter) {
-      setFiltered([
+      setFiltered(
         ...minerals.filter(
           (mineral) =>
             mineral.id === 20 || mineral.id === 17 || mineral.id === 6
-        ),
-      ]);
+        )
+      );
     } else if (!fancyFilter) {
       setFiltered(
-        ...filtered,
-        ...minerals.filter(
+        minerals.filter(
           (mineral) =>
             mineral.id !== 20 || mineral.id !== 17 || mineral.id !== 6
         )
       );
-    } else if (funnyFilter) {
-      setFiltered([
-        ...filtered,
-        minerals.filter(
-          (mineral) =>
-            mineral.name.length < 7 ||
-            (mineral.name.length > 10 && mineral.name.length < 12)
-        ),
-      ]);
-    } else if (!funnyFilter) {
-      setFiltered([
-        ...filtered,
-        minerals.filter(
-          (mineral) =>
-            !mineral.name.length < 7 ||
-            (!mineral.name.length > !10 && !mineral.name.length < 12)
-        ),
-      ]);
-    } else if (comFilter) {
-      setFiltered([
-        ...filtered,
-        minerals.filter(
-          (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
-        ),
-      ]);
-    } else if (!comFilter) {
-      setFiltered([
-        ...filtered,
-        minerals.filter(
-          (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
-        ),
-      ]);
-    } else if (fancyFilter) {
-      setFiltered([
-        ...filtered,
-        minerals.filter(
-          (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
-        ),
-      ]);
-    } else if (!fancyFilter) {
-      setFiltered([
-        ...filtered,
-        minerals.filter(
-          (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
-        ),
-      ]);
-    } else {
-      console.log("Error");
     }
   }
+  //   } else if (funnyFilter) {
+  //     setFiltered([
+  //       ...filtered,
+  //       minerals.filter(
+  //         (mineral) =>
+  //           mineral.name.length < 7 ||
+  //           (mineral.name.length > 10 && mineral.name.length < 12)
+  //       ),
+  //     ]);
+  //   } else if (!funnyFilter) {
+  //     setFiltered([
+  //       ...filtered,
+  //       minerals.filter(
+  //         (mineral) =>
+  //           !mineral.name.length < 7 ||
+  //           (!mineral.name.length > !10 && !mineral.name.length < 12)
+  //       ),
+  //     ]);
+  //   } else if (comFilter) {
+  //     setFiltered([
+  //       ...filtered,
+  //       minerals.filter(
+  //         (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
+  //       ),
+  //     ]);
+  //   } else if (!comFilter) {
+  //     setFiltered([
+  //       ...filtered,
+  //       minerals.filter(
+  //         (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
+  //       ),
+  //     ]);
+  //   } else if (fancyFilter) {
+  //     setFiltered([
+  //       ...filtered,
+  //       minerals.filter(
+  //         (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
+  //       ),
+  //     ]);
+  //   } else if (!fancyFilter) {
+  //     setFiltered([
+  //       ...filtered,
+  //       minerals.filter(
+  //         (mineral) => !mineral.name.length > 5 && !mineral.name.length < 8
+  //       ),
+  //     ]);
+  //   } else {
+  //     console.log("Error");
+  //   }
+  // }
+  console.log(filtered);
+  console.log(minerals);
   return (
     <div className="background-wrapper">
       <div className="shopMenu">
@@ -107,7 +109,10 @@ function ShopList({ minerals, handleBuy, deleteBuy, buy }) {
           : "Nothing in the Shopping Drone yet!"}
       </div>
       <div className="shopContainer">
-        {filtered.map((mineral) => (
+        {(fancyFilter || funnyFilter || celebFilter || comFilter
+          ? filtered
+          : minerals
+        ).map((mineral) => (
           <Shop
             handleBuy={handleBuy}
             id={mineral.id}
