@@ -1,6 +1,6 @@
 ## PAL 9000 :rocket:
 
-An application used to sell rocks and show photos from Mars, built with React, JavaScript, and CSS.
+An application used to sell rocks and show photos from Mars, built with React, JavaScript, and CSS built on a 24 hour hackathon.
 
 ## Project Status
 
